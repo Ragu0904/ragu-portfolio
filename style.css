@@ -6,7 +6,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* SMOOTH SCROLL */
 html {
   scroll-behavior: smooth;
 }
@@ -52,18 +51,58 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  padding-top: 80px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  gap: 50px;
 }
 
 .hero-content span {
   color: #00e6e6;
 }
 
+.hero-content h1 {
+  font-size: 48px;
+}
+
+.hero-content h2 {
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+.hero-content p {
+  max-width: 480px;
+  margin-top: 10px;
+}
+
+/* HERO IMAGE */
+.hero-image img {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  object-fit: contain;   /* ✅ FIX */
+  background: #ffffff;   /* fills empty space cleanly */
+  padding: 6px;          /* spacing inside circle */
+  border: 4px solid #00e6e6;
+  box-shadow: 0 0 35px rgba(0, 230, 230, 0.6);
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
 /* HERO BUTTONS */
 .hero-buttons {
   margin-top: 30px;
   display: flex;
-  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -76,7 +115,7 @@ body {
   border-radius: 50px;
   text-decoration: none;
   box-shadow: 0 8px 25px rgba(0, 230, 230, 0.4);
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .btn-secondary {
@@ -86,7 +125,6 @@ body {
   font-weight: 600;
   border-radius: 50px;
   text-decoration: none;
-  transition: all 0.3s ease;
 }
 
 .btn-primary:hover,
@@ -94,11 +132,11 @@ body {
   transform: translateY(-3px);
 }
 
-/* SECTIONS + SCROLL FIX */
+/* SECTIONS */
 .section {
   padding: 100px 20px;
   text-align: center;
-  scroll-margin-top: 120px; /* ✅ FIXED NAVBAR OFFSET */
+  scroll-margin-top: 120px;
 }
 
 .dark {
@@ -123,13 +161,11 @@ body {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   padding: 30px 20px;
-  text-align: center;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .skill-card img {
   width: 55px;
-  height: 55px;
   margin-bottom: 15px;
 }
 
@@ -148,54 +184,27 @@ body {
   text-align: left;
 }
 
-/* CONTACT CARD */
+/* CONTACT */
 .contact-card {
   max-width: 520px;
-  margin: 40px auto 0;
+  margin: auto;
   background: #000;
   padding: 30px;
   border-radius: 18px;
-  text-align: center;
 }
 
-/* CONTACT INFO */
-.contact-info {
-  margin-bottom: 25px;
-}
-
-.contact-info a {
-  color: #00e6e6;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* CONTACT FORM – FIXED */
 .contact-form {
   display: flex;
-  flex-direction: column;   /* ✅ FORCE vertical layout */
+  flex-direction: column;
   gap: 15px;
-  width: 100%;              /* ✅ FULL width inside card */
 }
 
-/* INPUTS */
 .contact-form input,
 .contact-form textarea {
-  width: 100%;              /* ✅ prevent collapse */
   padding: 14px;
   border-radius: 10px;
   border: none;
-  font-size: 14px;
-  outline: none;
 }
-
-/* BUTTON */
-.contact-form button {
-  align-self: center;       /* ✅ center button */
-  padding: 12px 36px;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
 
 /* FOOTER */
 footer {
@@ -203,3 +212,12 @@ footer {
   background: #000;
   text-align: center;
 }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
