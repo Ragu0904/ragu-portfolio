@@ -213,11 +213,61 @@ footer {
   text-align: center;
 }
 
-/* RESPONSIVE */
+/* MOBILE VIEW FIX */
 @media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .navbar ul li a {
+    font-size: 13px;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    height: auto;
+    padding: 120px 20px 60px; /* top space for navbar */
+  }
+
   .hero-container {
     flex-direction: column-reverse;
     text-align: center;
+    gap: 30px;
+  }
+
+  /* HERO TEXT */
+  .hero-content h1 {
+    font-size: 32px;   /* 🔥 FIX: bigger text */
+  }
+
+  .hero-content h2 {
+    font-size: 18px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+    margin: 10px auto 0;
+  }
+
+  /* IMAGE */
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* BUTTONS */
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 26px;
+    font-size: 14px;
   }
 }
+
+
 
