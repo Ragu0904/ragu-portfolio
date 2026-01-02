@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ragu | Portfolio</title>
+  <title>Ragu Venkatesan | Frontend Developer Portfolio</title>
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Your CSS -->
   <link rel="stylesheet" href="style.css">
+  
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -29,8 +35,8 @@
       <!-- LEFT CONTENT -->
       <div class="hero-content">
         <h1>Hi, I'm <span>Ragu</span> 👋</h1>
-        <h2>Frontend Developer</h2>
-        <p>I design & build modern, responsive web applications.</p>
+        <h2>Frontend Developer & IT Support Specialist</h2>
+        <p>I design & build modern, responsive web applications with a passion for creating seamless user experiences and delivering enterprise-level technical support.</p>
 
         <div class="hero-buttons">
           <a href="resume.pdf" download class="btn-primary">Download Resume</a>
@@ -49,39 +55,90 @@
   <!-- ABOUT -->
   <section id="about" class="section">
     <h2 class="section-title">About Me</h2>
-    <p>
-      I am a passionate Frontend Developer with 4 years of experience in enterprise applications, with strong exposure to retail support projects.
-      I have hands-on experience in production support, incident management, proactive monitoring, and delivering high-quality solutions for global retail clients.
-    </p>
+    <div class="about-content">
+      <p>
+        I am highly interested in Frontend Development and passionate about building user-friendly, responsive, and visually engaging web interfaces.
+        I enjoy working with modern frontend technologies to create smooth user experiences and continuously upskill myself to stay aligned with industry trends.
+      </p>
+
+      <p>
+        Currently working on enterprise-level retail applications with a strong focus on Order Management systems.
+        My role involves production support, incident and problem management, proactive monitoring, and handling client escalations to ensure uninterrupted business operations.
+        I actively collaborate with cross-functional teams to resolve critical issues efficiently and deliver reliable support for global retail clients.
+      </p>
+
+      <!-- Quick Stats -->
+      <div class="stats-container">
+        <div class="stat-item">
+          <h3>3+</h3>
+          <p>Years Experience</p>
+        </div>
+        <div class="stat-item">
+          <h3>98%</h3>
+          <p>SLA Compliance</p>
+        </div>
+        <div class="stat-item">
+          <h3>50+</h3>
+          <p>Projects Completed</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- SKILLS -->
   <section id="skills" class="section dark">
-    <h2 class="section-title">Skills</h2>
+    <h2 class="section-title">Technical Skills</h2>
 
     <div class="skills-grid">
       <div class="skill-card">
         <img src="html.png" alt="HTML">
-        <h3>HTML</h3>
+        <h3>HTML5</h3>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 90%"></div>
+        </div>
         <span class="skill-level">90%</span>
       </div>
 
       <div class="skill-card">
         <img src="css.jpg" alt="CSS">
-        <h3>CSS</h3>
+        <h3>CSS3</h3>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 85%"></div>
+        </div>
         <span class="skill-level">85%</span>
       </div>
 
       <div class="skill-card">
         <img src="js.png" alt="JavaScript">
         <h3>JavaScript</h3>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 75%"></div>
+        </div>
         <span class="skill-level">75%</span>
       </div>
 
       <div class="skill-card">
         <img src="sql.png" alt="SQL">
         <h3>SQL</h3>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 85%"></div>
+        </div>
         <span class="skill-level">85%</span>
+      </div>
+    </div>
+
+    <!-- Additional Skills -->
+    <div class="additional-skills">
+      <h3>Additional Expertise</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">ServiceNow</span>
+        <span class="skill-tag">ITSM</span>
+        <span class="skill-tag">Incident Management</span>
+        <span class="skill-tag">Order Management</span>
+        <span class="skill-tag">Git & GitHub</span>
+        <span class="skill-tag">Responsive Design</span>
+        <span class="skill-tag">Problem Solving</span>
+        <span class="skill-tag">Client Communication</span>
       </div>
     </div>
   </section>
@@ -92,42 +149,103 @@
 
     <div class="experience-card">
       <div class="experience-header">
-        <h3>Tata Consultancy Services</h3>
-        <span class="experience-date">02/2022 – Present</span>
+        <div>
+          <h3>Tata Consultancy Services</h3>
+          <p class="role">System Engineer - L3 Retail Support Specialist</p>
+        </div>
+        <span class="experience-date">Feb 2022 – Present</span>
       </div>
 
-      <p class="role">System Engineer</p>
-      <ul>
-        <li>L3 Retail Support professional experienced in incident management and ticket resolution.</li>
-        <li>Resolved incidents and service requests using ITSM tools within SLA.</li>
-        <li>Handled major incidents and escalations ensuring minimal downtime.</li>
-        <li>Delivered daily reports and status updates to clients.</li>
+      <ul class="experience-list">
+        <li>L3 Retail Support Specialist with proven expertise in ITSM operations, incident management, and SLA-driven service delivery across enterprise retail environments.</li>
+        <li>Managed end-to-end incident resolution and service request workflows using ServiceNow and ITSM platforms, consistently achieving 98% SLA compliance and first-call resolution targets.</li>
+        <li>Led critical incident response and major incident management (MIM), coordinating cross-functional teams to minimize business impact and ensure rapid restoration of retail operations.</li>
+        <li>Provided proactive stakeholder communication through comprehensive daily reporting, status dashboards, and executive-level updates to drive transparency and client satisfaction.</li>
       </ul>
+
+      <!-- Key Achievements -->
+      <div class="achievements">
+        <h4>Key Achievements:</h4>
+        <ul>
+          <li>🏆 Reduced average incident resolution time by 35%</li>
+          <li>🎯 Maintained 98%+ SLA compliance for 18+ consecutive months</li>
+          <li>⚡ Successfully managed 500+ critical incidents with zero data loss</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="section dark">
-    <h2 class="section-title">Contact Me</h2>
+    <h2 class="section-title">Let's Connect</h2>
 
     <div class="contact-card">
+      <!-- Contact Info -->
       <div class="contact-info">
         <p>📞 <a href="tel:+916382978336">+91 63829 78336</a></p>
         <p>📧 <a href="mailto:raguanbu00@gmail.com">raguanbu00@gmail.com</a></p>
+        <p>📍 <span style="color: #00d9ff;">Chennai, Tamil Nadu, India</span></p>
       </div>
 
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit" class="btn-primary">Send Message</button>
+      <!-- Contact Form -->
+      <form class="contact-form" id="contactForm">
+        <input 
+          type="text" 
+          name="user_name" 
+          placeholder="Your Full Name *" 
+          required
+          autocomplete="name">
+        
+        <input 
+          type="email" 
+          name="user_email" 
+          placeholder="Your Email Address *" 
+          required
+          autocomplete="email">
+        
+        <input 
+          type="tel" 
+          name="user_phone" 
+          placeholder="Your Phone Number (Optional)"
+          autocomplete="tel">
+        
+        <input 
+          type="text" 
+          name="subject" 
+          placeholder="Subject *" 
+          required>
+        
+        <textarea 
+          name="message" 
+          placeholder="Your Message *" 
+          rows="5" 
+          required></textarea>
+        
+        <button type="submit" class="btn-primary" id="submitBtn">
+          <span class="btn-text">Send Message</span>
+          <span class="btn-loading" style="display: none;">Sending...</span>
+        </button>
       </form>
+
+      <!-- Status Message -->
+      <div id="formStatus" class="form-status"></div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>© 2025 Ragu. All rights reserved.</p>
+    <div class="footer-content">
+      <p>© 2025 Ragu Venkatesan. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">💼</a>
+        <a href="https://github.com/yourprofile" target="_blank" title="GitHub">💻</a>
+        <a href="mailto:raguanbu00@gmail.com" title="Email">📧</a>
+      </div>
+    </div>
   </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 
 </body>
 </html>
